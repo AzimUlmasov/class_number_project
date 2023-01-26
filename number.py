@@ -111,7 +111,7 @@ class Number:
 
         returns: int
         """
-        pass
+        return max(self.value)
 
     def get_min(self):
         """
@@ -119,7 +119,7 @@ class Number:
 
         returns: int
         """
-        pass
+        return min(self.value)
 
     def get_average(self):
         """
@@ -143,7 +143,7 @@ class Number:
 
         returns: list
         """
-        pass
+        return [min(map(int,str(self.value))), max(map(int,str(self.value)))]
 
     def get_frequency(self):
         """
@@ -151,7 +151,7 @@ class Number:
 
         returns: dict
         """
-        pass
+        
     
 
 # Create a new instance of Number
