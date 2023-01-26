@@ -59,7 +59,7 @@ class Number:
 
         returns: int
         """
-        return len(int(self.value))
+        return len(str(self.value))
 
     def get_sum(self):
         """
@@ -80,7 +80,7 @@ class Number:
 
         returns: int
         """
-        pass
+        return int(str(self.value)[::-1])
 
     def is_palindrome(self):
         """
@@ -88,7 +88,14 @@ class Number:
 
         returns: bool
         """
-        pass
+        # d = self.get_digits()
+        # n = len(d)
+        # if n%2==0:
+        #     return d[:n//2] == d[n//2:,-1]
+        # else:
+        #     return d[:n//2-1] == d[n//2+1:,-1]
+
+        return str(self.value) == str(self.value)[::-1]
 
     def get_digits(self):
         """
@@ -96,7 +103,7 @@ class Number:
 
         returns: list
         """
-        pass
+        return self.get_digits()[::-1] 
 
     def get_max(self):
         """
