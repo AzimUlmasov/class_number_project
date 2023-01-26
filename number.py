@@ -9,7 +9,7 @@ class Number:
 
         returns: int
         """
-        pass
+        return self.value
 
     def is_odd(self):
         """
@@ -18,7 +18,7 @@ class Number:
         returns: bool
 
         """
-        pass
+        return self.value %2 !=0
 
     def is_even(self):
         """
@@ -26,7 +26,7 @@ class Number:
 
         returns: bool
         """
-        pass
+        return self.value %2 == 0
 
     def is_prime(self):
         """
@@ -34,15 +34,24 @@ class Number:
 
         returns: bool
         """
-        pass
-
+        if self < 2:
+            return False
+        for i in range(2, int(self ** 0.5) + 1):
+            if self % i == 0:
+                return False
+        return True
+        
     def get_divisors(self):
         """
         Returns a list of all the divisors of the number.
 
         returns: list
         """
-        pass
+        divs = []
+        for i in range(1, self +1):
+            if self % i == 0:
+                divs.append(i)
+            return divs
 
     def get_length(self):
         """
@@ -50,7 +59,7 @@ class Number:
 
         returns: int
         """
-        pass
+        return len(int(self.value))
 
     def get_sum(self):
         """
@@ -58,7 +67,12 @@ class Number:
 
         returns: int
         """
-        pass
+        digits = str(self.value)
+        sum = 0
+        for i in digits:
+            sum += int(i)
+        return sum
+
 
     def get_reverse(self):
         """
