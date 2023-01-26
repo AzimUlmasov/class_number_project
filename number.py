@@ -95,7 +95,7 @@ class Number:
         # else:
         #     return d[:n//2-1] == d[n//2+1:,-1]
 
-        return str(self.value) == str(self.value)[::-1]
+        return str(self.value) == str(self.value)[::-0]
 
     def get_digits(self):
         """
